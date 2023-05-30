@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E6F1F1"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="26.66dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="26.66dp"
+                android:background="@drawable/ic_image_car"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cardview_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/sprint_sans_medium"
+                        android:text="Welcome To BayRide"
+                        android:textAlignment="center"
+                        android:textColor="@color/txtColor"
+                        android:textSize="20sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/sprint_sans_regular"
+                        android:text="Please click one of the following to proceed..."
+                        android:textAlignment="center"
+                        android:textColor="@color/txtColor"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/title" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/otpLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/rounded_green_rectangle"
+                        android:gravity="center_vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/message">
+
+                        <CheckBox
+                            android:id="@+id/smartfareCheckbox"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="14dp"
+                            android:background="@drawable/radio_button"
+                            android:button="@android:color/transparent"
+                            android:checked="true"
+                            android:clickable="false" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/sprint_sans_regular"
+                            android:lines="1"
+                            android:text="S.M.A.R.T.FARE™ &amp; RideNodes"
+                            android:textColor="@color/txtColor"
+                            android:textSize="15sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/newPasswordLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/rounded_green_rectangle"
+                        android:gravity="center_vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/otpLayout">
+
+                        <CheckBox
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="14dp"
+                            android:background="@drawable/radio_button"
+                            android:button="@android:color/transparent"
+                            android:enabled="false" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/sprint_sans_regular"
+                            android:lines="1"
+                            android:text="RideGuard (Beta)"
+                            android:textColor="@color/txtColor"
+                            android:textSize="15sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/rideExLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/rounded_green_rectangle"
+                        android:gravity="center_vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/newPasswordLayout">
+
+                        <CheckBox
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="14dp"
+                            android:background="@drawable/radio_button"
+                            android:button="@android:color/transparent"
+                            android:enabled="false" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/sprint_sans_regular"
+                            android:lines="1"
+                            android:text="RideEx (Beta)"
+                            android:textColor="@color/txtColor"
+                            android:textSize="15sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <LinearLayout
+                        android:id="@+id/chooseType"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rideExLayout">
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layout_user_app"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center_vertical">
+
+                            <CheckBox
+                                android:id="@+id/user_app"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/radio_button"
+                                android:button="@android:color/transparent"
+                                android:checked="false" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="1dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center_vertical"
+                                android:text="User app"
+                                android:textColor="#454545"
+                                android:textSize="12sp" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layout_driver_app"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center_vertical">
+
+                            <CheckBox
+                                android:id="@+id/driver_app"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="14dp"
+                                android:background="@drawable/radio_button"
+                                android:button="@android:color/transparent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="14dp"
+                                android:layout_marginTop="1dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:lines="1"
+                                android:text="Driver app"
+                                android:textColor="#454545"
+                                android:textSize="12sp" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/termsAndConditionsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="26dp"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/chooseType">
+
+                        <CheckBox
+                            android:id="@+id/termsAndConditionsCheckbox"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="14dp"
+                            android:background="@drawable/ic_checkbox"
+                            android:button="@android:color/transparent" />
+
+                        <TextView
+                            android:id="@+id/termsAndConditions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="6dp"
+                            android:fontFamily="@font/sprint_sans_regular"
+                            android:lines="1"
+                            android:text="@string/i_accept_terms_and_conditions"
+                            android:textColor="@color/txtColor"
+                            android:textSize="12.5sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnNext"
+                        style="@style/MainButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="41dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="37dp"
+                        android:insetTop="1dp"
+                        android:insetBottom="1dp"
+                        android:text="Next"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/termsAndConditionsLayout" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

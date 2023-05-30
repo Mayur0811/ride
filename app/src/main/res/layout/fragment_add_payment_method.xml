@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="23dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/ic_arrow_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Payment Method"
+            android:textColor="@color/txtColor"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/toggle_background"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/btnBack">
+
+            <RadioGroup
+                android:id="@+id/toggle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#F8F8F8"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/btn_credit_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selected_payment_tab"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:stateListAnimator="@null"
+                    android:text="Credit Card"
+                    android:textAlignment="center"
+                    android:textColor="@color/selectedTextBlack"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/btn_crypto_wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:paddingTop="3dp"
+                    android:clickable="false"
+                    android:paddingBottom="3dp"
+                    android:text="Crypto Wallet"
+                    android:textAlignment="center"
+                    android:textColor="@color/selectedTextBlack"
+                    android:textSize="12sp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:overScrollMode="never"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/creditCardLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="300dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="203dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="26dp"
+                        android:background="@drawable/ic_card"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/cardNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="26dp"
+                            android:layout_marginTop="106dp"
+                            android:hint="Card Number"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="25sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/cardHolderName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginBottom="22dp"
+                            android:hint="Your name"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cardNumber" />
+
+                        <TextView
+                            android:id="@+id/validThru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="31dp"
+                            android:layout_marginBottom="19dp"
+                            android:hint="THRU "
+                            android:maxLength="10"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cardNumber" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/cardNumberLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="25dp"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/image">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/sprint_sans_regular"
+                            android:text="Card Number"
+                            android:textColor="@color/txtColorGray" />
+
+                        <EditText
+                            android:id="@+id/edCardNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@drawable/rounded_gray_rectangle"
+                            android:digits="1234567890 "
+                            android:fontFamily="@font/sprint_sans_regular"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            android:maxLength="19"
+                            android:paddingLeft="15dp"
+                            android:textColor="@color/txtColorGray"
+                            android:textSize="12sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/textLayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="25dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cardNumberLayout">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/sprint_sans_regular"
+                            android:text="Valid Thru(Mm/Yy)"
+                            android:textColor="@color/txtColorGray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/sprint_sans_regular"
+                            android:text="CVV"
+                            android:textColor="@color/txtColorGray" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/inputLayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="25dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textLayer">
+
+                        <EditText
+                            android:id="@+id/edValidThru"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginRight="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_gray_rectangle"
+                            android:digits="1234567890/"
+                            android:fontFamily="@font/sprint_sans_regular"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:paddingLeft="15dp"
+                            android:textColor="@color/txtColorGray"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edCVV"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_gray_rectangle"
+                            android:fontFamily="@font/sprint_sans_regular"
+                            android:singleLine="true"
+                            android:maxLength="3"
+                            android:inputType="number"
+                            android:paddingLeft="15dp"
+                            android:textColor="@color/txtColorGray"
+                            android:textSize="12sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/nameOnCardLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="25dp"
+                        android:orientation="vertical"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/inputLayer">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/sprint_sans_regular"
+                            android:text="Name On Card"
+                            android:textColor="@color/txtColorGray" />
+
+                        <EditText
+                            android:id="@+id/edCardHolderName"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@drawable/rounded_gray_rectangle"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                            android:fontFamily="@font/sprint_sans_regular"
+                            android:inputType=""
+                            android:singleLine="true"
+                            android:maxLength="20"
+                            android:paddingLeft="15dp"
+                            android:textColor="@color/txtColorGray"
+                            android:textSize="12sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cryptoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/sprint_sans_regular"
+                            android:text="Crypto Wallet ID"
+                            android:textColor="@color/txtColorGray" />
+
+                        <EditText
+                            android:id="@+id/edCryptoWalletId"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@drawable/rounded_gray_rectangle"
+                            android:fontFamily="@font/sprint_sans_regular"
+                            android:hint="Crypto Wallet ID"
+                            android:lines="1"
+                            android:paddingLeft="15dp"
+                            android:textColor="@color/txtColorGray"
+                            android:textColorHint="@color/txtColorGray"
+                            android:textSize="12sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/termsAndConditionsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                app:layout_constraintBottom_toTopOf="@id/btnNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <CheckBox
+                    android:id="@+id/termsAndConditionsCheckbox"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:background="@drawable/ic_checkbox"
+                    android:button="@android:color/transparent" />
+
+                <TextView
+                    android:id="@+id/termsAndConditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:fontFamily="@font/sprint_sans_regular"
+                    android:lines="1"
+                    android:text="@string/you_agree_to_our_terms_and_conditions"
+                    android:textColor="@color/txtColor"
+                    android:textSize="12sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNext"
+                style="@style/MainButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/sprint_sans_regular"
+                android:insetTop="1dp"
+                android:insetBottom="1dp"
+                android:text="Next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

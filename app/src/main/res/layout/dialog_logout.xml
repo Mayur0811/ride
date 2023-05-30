@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+        <ImageView
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#050505"
+            android:alpha="0.1"
+            />
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/blurView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:blurOverlayColor="@color/transparent"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginEnd="51dp"
+            android:elevation="15dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/titleView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="@string/logout_message"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:layout_width="205dp"
+                    android:layout_height="51dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:weightSum="2"
+                    app:layout_constraintEnd_toEndOf="@+id/titleView"
+                    app:layout_constraintStart_toStartOf="@+id/titleView"
+                    app:layout_constraintTop_toBottomOf="@id/titleView">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_No"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sprint_sans_regular"
+                        android:gravity="center"
+                        android:insetTop="1dp"
+                        android:insetBottom="1dp"
+                        android:shadowColor="@color/lightGreen"
+                        android:text="No"
+                        android:textAllCaps="false"
+                        android:textColor="@color/txtColor"
+                        android:textSize="16sp"
+                        app:cornerRadius="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/confirm_signature"
+                        app:rippleColor="@color/txtColor"
+                        app:strokeColor="@color/txtColor"
+                        app:strokeWidth="1dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_yes"
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/button_disabled"
+                        android:fontFamily="@font/sprint_sans_regular"
+                        android:insetTop="1dp"
+                        android:insetBottom="1dp"
+                        android:text="Yes"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:cornerRadius="8dp"
+                        app:iconTint="#0d777a"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_navigation_icon"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Booking History"
+            android:textColor="@color/txtColor"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appCompatImageView" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="23dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/title">
+
+            <RadioGroup
+                android:id="@+id/toggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/button_radius_with_no_border"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/btn_ongoing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selected_tab"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:text="Ongoing"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
+
+                <RadioButton
+                    android:id="@+id/btn_complete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="3dp"
+                    android:text="Completed"
+                    android:textColor="@color/txtColor"
+                    android:textSize="10sp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/linear"
+            tools:itemCount="3"
+            android:overScrollMode="never"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="10dp"
+            android:clipToPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/ongoing_list_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

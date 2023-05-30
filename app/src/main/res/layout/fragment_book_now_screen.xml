@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp">
+
+        <View
+            android:layout_width="54dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_corner"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="29dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="5dp"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Book Now"
+            android:textColor="@color/txtColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/title">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/infoCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="228dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="25dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="3dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/dateAndTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="13dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Nov 25, 2021, 09:30 AM"
+                            android:textColor="@color/smart_txt"
+                            android:textSize="11sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/from_to_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="56dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="7dp"
+                            android:src="@drawable/ic_from_to"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/dateAndTime" />
+
+                        <TextView
+                            android:id="@+id/txt_from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginTop="8dp"
+                            android:text="From"
+                            android:textColor="@color/title_color"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toEndOf="@+id/from_to_icon"
+                            app:layout_constraintTop_toBottomOf="@+id/dateAndTime" />
+
+                        <TextView
+                            android:id="@+id/txt_from_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="18dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="99460 Clovis Inlet, Hamillstad, MO, SB"
+                            android:textColor="@color/from_to_text_color"
+                            android:textSize="11sp"
+                            app:layout_constraintLeft_toRightOf="@id/from_to_icon"
+                            app:layout_constraintTop_toBottomOf="@id/txt_from" />
+
+                        <TextView
+                            android:id="@+id/txt_to"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginTop="10dp"
+                            android:text="To"
+                            android:textColor="@color/title_color"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toEndOf="@+id/from_to_icon"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_from_location" />
+
+                        <TextView
+                            android:id="@+id/txt_to_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="18dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="507 Lang Well, Lake Eliseo, OH, IE"
+                            android:textColor="@color/from_to_text_color"
+                            android:textSize="11sp"
+                            app:layout_constraintLeft_toRightOf="@id/from_to_icon"
+                            app:layout_constraintTop_toBottomOf="@id/txt_to" />
+
+                        <ImageView
+                            android:id="@+id/driver_profile_icon"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="29dp"
+                            android:background="@drawable/driver_profile"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/from_to_icon" />
+
+                        <TextView
+                            android:id="@+id/driver_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Gia Aufderhar MD"
+                            android:textColor="@color/black"
+                            android:textSize="13dp"
+                            app:layout_constraintLeft_toRightOf="@id/driver_profile_icon"
+                            app:layout_constraintTop_toBottomOf="@id/txt_to_location" />
+
+                        <TextView
+                            android:id="@+id/driver_phone_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="1dp"
+                            android:text="+01 1234567890"
+                            android:textColor="@color/driver_color"
+                            android:textSize="10sp"
+                            app:layout_constraintLeft_toRightOf="@id/driver_profile_icon"
+                            app:layout_constraintTop_toBottomOf="@id/driver_name" />
+
+                        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                            android:id="@+id/rating_bar"
+                            android:layout_width="90dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="1dp"
+                            app:layout_constraintLeft_toRightOf="@id/driver_profile_icon"
+                            app:layout_constraintTop_toBottomOf="@id/driver_phone_no"
+                            app:mrb_fillBackgroundStars="true"
+                            app:mrb_progressTint="#FFC400"
+                            app:mrb_secondaryProgressTint="#CDCDCD" />
+
+                        <TextView
+                            android:id="@+id/total_review"
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="(25)"
+                            android:textAlignment="center"
+                            android:textColor="@color/driver_color"
+                            android:textSize="10sp"
+                            app:layout_constraintBottom_toBottomOf="@id/rating_bar"
+                            app:layout_constraintLeft_toRightOf="@id/rating_bar"
+                            app:layout_constraintTop_toTopOf="@id/rating_bar" />
+
+                        <TextView
+                            android:id="@+id/txtCar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="52dp"
+                            android:layout_marginTop="17dp"
+                            android:text="Car"
+                            android:textSize="8sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/driver_profile_icon" />
+
+                        <TextView
+                            android:id="@+id/txtCarName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="BMW M Sedan"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            app:layout_constraintEnd_toEndOf="@+id/txtCar"
+                            app:layout_constraintStart_toStartOf="@+id/txtCar"
+                            app:layout_constraintTop_toBottomOf="@id/txtCar" />
+
+                        <TextView
+                            android:id="@+id/txtCarNumberText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Car Number"
+                            android:textSize="8sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/txtCar"
+                            app:layout_constraintLeft_toRightOf="@id/txtCar"
+                            app:layout_constraintRight_toLeftOf="@id/txtPriceText"
+                            app:layout_constraintTop_toTopOf="@id/txtCar" />
+
+                        <TextView
+                            android:id="@+id/txtCarNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="KL 41G 8703"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            app:layout_constraintEnd_toEndOf="@+id/txtCarNumberText"
+                            app:layout_constraintStart_toStartOf="@+id/txtCarNumberText"
+                            app:layout_constraintTop_toBottomOf="@id/txtCarNumberText" />
+
+                        <TextView
+                            android:id="@+id/txtPriceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="27dp"
+                            android:text="Price"
+                            android:textSize="8sp"
+                            app:layout_constraintBottom_toBottomOf="@id/txtCarNumberText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/txtCarNumberText"
+                            app:layout_constraintTop_toTopOf="@id/txtCarNumberText" />
+
+                        <TextView
+                            android:id="@+id/txtPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="$ 30"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            app:layout_constraintEnd_toEndOf="@+id/txtPriceText"
+                            app:layout_constraintStart_toStartOf="@+id/txtPriceText"
+                            app:layout_constraintTop_toBottomOf="@id/txtPriceText" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/txt_payment_method"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Payment Method"
+                    android:textColor="@color/txtColor"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/infoCard" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/optionCreditCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/selected_payment_tab"
+                    android:clickable="true"
+                    android:elevation="1dp"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_payment_method">
+
+                    <TextView
+                        android:id="@+id/creditCardIcon"
+                        android:layout_width="29dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/ic_atm_card"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="12dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Credit Card"
+                        android:textColor="@color/title_color"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/creditCardIcon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RadioButton
+                        android:id="@+id/radioCreditCard"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="14dp"
+                        android:background="@drawable/radio_button"
+                        android:button="@color/transparent"
+                        android:clickable="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/optionBitcoin"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/selected_payment_tab"
+                    android:clickable="true"
+                    android:elevation="1dp"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/optionCreditCard">
+
+                    <TextView
+                        android:id="@+id/bitcoinIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="19dp"
+                        android:background="@drawable/ic_bitcoin"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Bitcoin"
+                        android:textColor="@color/title_color"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/bitcoinIcon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RadioButton
+                        android:id="@+id/radioBitcoin"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="14dp"
+                        android:background="@drawable/radio_button"
+                        android:button="@color/transparent"
+                        android:clickable="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/optionETH"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/selected_payment_tab"
+                    android:clickable="true"
+                    android:elevation="1dp"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/optionBitcoin">
+
+                    <TextView
+                        android:id="@+id/ethIcon"
+                        android:layout_width="14dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="22dp"
+                        android:background="@drawable/ic_ethereum"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="19dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="ETH"
+                        android:textColor="@color/title_color"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ethIcon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RadioButton
+                        android:id="@+id/radioETH"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="14dp"
+                        android:background="@drawable/radio_button"
+                        android:button="@color/transparent"
+                        android:clickable="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/optionDodge"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/selected_payment_tab"
+                    android:clickable="true"
+                    android:elevation="1dp"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/optionETH">
+
+                    <TextView
+                        android:id="@+id/dodgeIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="19dp"
+                        android:background="@drawable/ic_dogecoin"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="19dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Dodge"
+                        android:textColor="@color/title_color"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/dodgeIcon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RadioButton
+                        android:id="@+id/radioDodge"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="14dp"
+                        android:background="@drawable/radio_button"
+                        android:button="@color/transparent"
+                        android:clickable="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/optionRideNode"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="150dp"
+                    android:background="@drawable/selected_payment_tab"
+                    android:clickable="true"
+                    android:elevation="1dp"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/optionDodge">
+
+                    <TextView
+                        android:id="@+id/rideNodeIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="19dp"
+                        android:background="@drawable/ic_ride_node"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="19dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="RideNode"
+                        android:textColor="@color/title_color"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/rideNodeIcon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RadioButton
+                        android:id="@+id/radioRideNode"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="14dp"
+                        android:background="@drawable/radio_button"
+                        android:button="@color/transparent"
+                        android:clickable="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBookNow"
+                    style="@style/MainButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="25dp"
+                    android:fontFamily="@font/sprint_sans_medium"
+                    android:insetTop="1dp"
+                    android:insetBottom="1dp"
+                    android:text="Book Now"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/optionRideNode" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

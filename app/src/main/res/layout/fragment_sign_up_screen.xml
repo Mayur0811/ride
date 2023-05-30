@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightGreen"
+            android:descendantFocusability="blocksDescendants"
+            tools:context=".presentation.features.signup.SignUpScreen">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/ic_image_car"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardview_background"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/sprint_sans_medium"
+                        android:gravity="center"
+                        android:text="@string/let_s_get_started"
+                        android:textColor="@color/txtColor"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/materialTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sprint_sans_regular"
+                        android:gravity="center"
+                        android:text="create a new account"
+                        android:textColor="@color/txtColor"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/heading" />
+
+                    <LinearLayout
+                        android:id="@+id/linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="23dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@+id/materialTextView">
+
+                        <RadioGroup
+                            android:id="@+id/toggle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:padding="2dp"
+                            android:background="@drawable/button_radius"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <RadioButton
+                                android:id="@+id/btn_passenger"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_regular"
+                                android:background="@drawable/selected_tab"
+                                android:button="@android:color/transparent"
+                                android:checked="true"
+                                android:gravity="center"
+                                android:paddingTop="4dp"
+                                android:textSize="13sp"
+                                android:text="Passenger"
+                                android:textColor="@color/white" />
+
+                            <RadioButton
+                                android:id="@+id/btn_drive"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:button="@android:color/transparent"
+                                android:gravity="center"
+                                android:textColor="@color/gray"
+                                android:paddingTop="4dp"
+                                android:textSize="13sp"
+                                android:paddingBottom="3dp"
+                                android:text="Driver" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/detailsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="true"
+                        android:focusable="true"
+                        android:overScrollMode="never"
+                        android:clickable="true"
+                        android:layout_marginTop="10dp"
+                        android:background="?attr/selectableItemBackground"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linear"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/termsAndConditionsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent">
+                    <CheckBox
+                        android:id="@+id/termsAndConditionsCheckbox"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:background="@drawable/ic_checkbox"
+                        android:layout_marginLeft="14dp"
+                        android:button="@android:color/transparent"/>
+
+                    <TextView
+                        android:id="@+id/termsAndConditions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/sprint_sans_regular"
+                        android:lines="1"
+                        android:text="@string/you_agree_to_our_terms_and_conditions"
+                        android:textColor="@color/txtColor"
+                        android:textSize="12sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

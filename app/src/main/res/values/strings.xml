@@ -1,0 +1,85 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">BayRide</string>
+    <string name="let_s_get_started">Let\'s Get Started</string>
+    <!--    <string name="you_agree_to_our_terms_and_conditions">You agree our <a href="#"><font color="#0D777A">Terms &amp; Conditions</font></a></string>-->
+    <!-- Drivers-->
+    <string name="drive_contact_information">Contact Information</string>
+    <string name="drive_upload_picture_of_your_vehical">Upload picture of your vehicle</string>
+    <string name="drive_Vehicle_details">Vehicle Details</string>
+    <string name="drive_upload_driving_licences">Upload Driving License</string>
+    <string name="drive_insurance_information">Insurance Information</string>
+    <string name="drive_upload_insurance_card">Upload Insurance Card</string>
+    <string name="drive_accepts_crypto">Accepts Crypto</string>
+    <string name="drive_accepts_pets">Accepts Pets</string>
+    <string name="drive_bank_details">Bank Details</string>
+
+    <!-- Passenger-->
+    <string name="passenger_upload_photo">Upload Photo</string>
+    <string name="passenger_Name">Name</string>
+    <string name="passenger_create_username">Create Username</string>
+    <string name="passenger_email">Email</string>
+    <string name="passenger_phone_number">Phone Number</string>
+    <string name="passenger_address">Address</string>
+    <string name="passenger_create_password">Create Password</string>
+    <string name="passenger_signature">Signature</string>
+    <string name="passenger_enter_payment_details">Enter Payment Details</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="i_accept_terms_and_conditions">I accept to Terms &amp; Conditions</string>
+    <string name="you_agree_to_our_terms_and_conditions">You agree our Terms &amp; Conditions</string>
+    <string name="dont_have_account_register">Don\'t have an Account? Register</string>
+    <string name="SMART_fare">S.M.A.R.T.FARE™</string>
+    <string name="give_rating_text">Rate your experience with this driver</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Timmothy Herzog</string>
+    <string name="nav_header_subtitle">timmothyherzog274@697av.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consetetur_sadipscing_elitr_sed_diam_nonumy_eirmod_tempor_invidunt_ut_labore_et_dolore_magna_aliquyam_erat_sed_diam_voluptua">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</string>
+    <string name="is_your_driver_arrived_to_pick_up_n_you_for_your_ride">Is your Driver Arrived to pick up \n you for your Ride?</string>
+    <string name="is_your_ride_completed">Is your ride Completed?</string>
+    <string name="cancel_ride">Cancel Ride</string>
+    <string name="logout_message">Are you sure you want to logout?</string>
+
+    <string name="granted_permissions">Granted: %s</string>
+    <string name="permanently_denied_permissions">Permanently denied: %s</string>
+    <string name="permissions_required">Permissions required</string>
+    <string name="rationale_permissions">Rationale: %s</string>
+    <string name="request_again">Request again</string>
+    <string name="action_settings">Settings</string>
+    <string name="accept_term_condition" tools:ignore="ExtraTranslation">Please Accept Terms &amp; Conditions</string>
+    <string name="fails">Oops!</string>
+    <string name="require_email">E-mail is required</string>
+    <string name="require_password">Password is required</string>
+    <string name="please_enter_password">Please enter password</string>
+    <string name="failed">Failed</string>
+    <string name="Error">Error</string>
+    <string name="Success">Success</string>
+
+    <string name="login_error">Email and password does not match our records...</string>
+
+    <string name="btn_ok">OK</string>
+    <string name="please_enter_email">Please enter email</string>
+    <string name="please_enter_valid_email">Please enter valid email</string>
+    <string name="please_enter_valid_password">Please enter valid password</string>
+    <string name="passwords_not_match">Passwords do not match</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="otp_verification_fail">OTP verification fail.</string>
+    <string name="enter_required_field">Enter a required field</string>
+    <string name="invalid_code">Invalid code</string>
+    <string name="accept">accept</string>
+    <string name="reject">reject</string>
+    <string name="please_select_any_reason">Please Select Any Reason</string>
+</resources>
+

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:padding="5dp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_upload_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/SMART_fare"
+        android:textColor="@color/txtColor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:paddingBottom="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnBack">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Nov 25, 2021, 09:30 AM"
+                android:textColor="@color/smart_txt"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="$40.00"
+                android:textColor="@color/smart_txt"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txt_date" />
+
+            <LinearLayout
+                android:id="@+id/bidding_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_date">
+
+                <TextView
+                    android:id="@+id/title_bidding_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Bidding Time:"
+                    android:textColor="@color/smart_txt"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_bidding_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="5 Min"
+                    android:textColor="@color/smart_txt"
+
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vehicle_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bidding_container">
+
+                <TextView
+                    android:id="@+id/title_vehicle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Vehicle: "
+                    android:textColor="@color/smart_txt"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/vehicle_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Sedan"
+                    android:textColor="@color/smart_txt"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_from_to"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_to"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vehicle_container">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txt_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="59dp"
+                android:layout_marginTop="9dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="From"
+                android:textColor="@color/title_color"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vehicle_container" />
+
+            <TextView
+                android:id="@+id/txt_from_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="59dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="99460 Clovis Inlet, Hamillstad, MO, SB"
+                android:textColor="#454545"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_from" />
+
+            <TextView
+                android:id="@+id/txt_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="59dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="To"
+                android:textColor="@color/title_color"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_from_location" />
+
+            <TextView
+                android:id="@+id/txt_to_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="59dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="507 Lang Well, Lake Eliseo, OH, IE"
+                android:textColor="#454545"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_to" />
+
+            <TextView
+                android:id="@+id/txt_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Comments"
+                android:textColor="@color/title_color"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_to_location" />
+
+            <TextView
+                android:id="@+id/comment_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="34dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/lorem_ipsum_dolor_sit_amet_consetetur_sadipscing_elitr_sed_diam_nonumy_eirmod_tempor_invidunt_ut_labore_et_dolore_magna_aliquyam_erat_sed_diam_voluptua"
+                android:textColor="#454545"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_comment" />
+
+            <TextView
+                android:id="@+id/txt_google_screenshot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Google's Screenshot"
+                android:textColor="@color/title_color"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/comment_description" />
+
+            <LinearLayout
+                android:id="@+id/linear_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="7dp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_google_screenshot">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgDriver"
+                    android:layout_width="77dp"
+                    android:layout_height="77dp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/constraint">
+
+                    <ImageView
+                        android:id="@+id/car_sedan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_user_avatar" />
+                </androidx.cardview.widget.CardView>
+
+
+                <RelativeLayout
+                    android:layout_width="76dp"
+                    android:layout_height="76dp"
+                    android:layout_marginStart="6dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <ImageView
+                        android:id="@+id/car_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/map2" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="76dp"
+                    android:layout_height="76dp"
+                    android:layout_marginStart="6dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <ImageView
+                        android:id="@+id/van"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/map3" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="76dp"
+                    android:layout_height="76dp"
+                    android:layout_marginStart="6dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <ImageView
+                        android:id="@+id/xuv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/map4" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_upload_selfie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Upload Selfie"
+                android:textColor="@color/title_color"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_container" />
+
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/dashed_green_border_width"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_upload_selfie">
+
+
+                <ImageView
+                    android:id="@+id/icon_upload"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:src="@drawable/upload_selfie" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_Selfie"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/set_selfie"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/txt_signature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Signature"
+                android:textColor="@color/title_color"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relative" />
+
+            <LinearLayout
+                android:id="@+id/signature_layout"
+                android:layout_width="match_parent"
+                android:layout_height="255dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/dashed_border"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_signature">
+
+                <com.bayride.common.views.SignatureView
+                        android:id="@+id/signatureView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toTopOf="@+id/buttonClear"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!--                <com.github.gcacace.signaturepad.views.SignaturePad-->
+                <!--                    android:id="@+id/signature_pad"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="250dp"-->
+                <!--                    android:layout_margin="5dp"-->
+                <!--                    android:visibility="gone"-->
+                <!--                    app:layout_constraintLeft_toLeftOf="parent"-->
+                <!--                    app:layout_constraintRight_toRightOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent"-->
+                <!--                    app:penColor="@android:color/black" />-->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_signature_instruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="11dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Please add your signature here"
+                android:textColor="@color/title_color"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signature_layout" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/termsAndConditionsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="19dp"
+                android:gravity="center_vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_signature_instruction">
+
+                <CheckBox
+                    android:id="@+id/termsAndConditionsCheckbox"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/ic_checkbox"
+                    android:button="@android:color/transparent" />
+
+                <TextView
+                    android:id="@+id/termsAndConditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6dp"
+                    android:fontFamily="@font/sprint_sans_regular"
+                    android:lines="1"
+                    android:text="@string/you_agree_to_our_terms_and_conditions"
+                    android:textColor="@color/txtColor"
+                    android:textSize="12.5sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNext"
+                style="@style/MainButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="25dp"
+                android:insetTop="1dp"
+                android:insetBottom="1dp"
+                android:text="Next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/termsAndConditionsLayout" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layout_alpha"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="@color/black"
+        android:visibility="gone" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/request_dialog"
+        android:layout_width="264dp"
+        android:layout_height="264dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="55dp"
+        android:elevation="12dp"
+        android:visibility="gone"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_request_successfully_sent" />
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

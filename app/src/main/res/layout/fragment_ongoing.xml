@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="54dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_corner"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/ridePalTmBtn"
+                android:layout_width="119dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ic_ridepal_tm_btn"
+                app:backgroundTint="@null"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtBookingId"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Booking Id: #919100"
+                android:textColor="@color/smart_txt"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dateAndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Nov 25, 2021, 09:30 AM"
+                android:textColor="@color/smart_txt"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="@id/txtBookingId"
+                app:layout_constraintTop_toBottomOf="@id/txtBookingId" />
+
+            <TextView
+                android:id="@+id/txtAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Amount : $30.00"
+                android:textColor="@color/smart_txt"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@id/dateAndTime"
+                app:layout_constraintTop_toBottomOf="@id/dateAndTime" />
+
+            <ImageView
+                android:id="@+id/from_to_icon"
+                android:layout_width="13dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/ic_from_to"
+                app:layout_constraintLeft_toLeftOf="@id/txtAmount"
+                app:layout_constraintTop_toBottomOf="@id/txtAmount" />
+
+            <TextView
+                android:id="@+id/fromText"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="9dp"
+                android:text="From"
+                android:textColor="@color/title_color"
+                android:textSize="10sp"
+                app:layout_constraintLeft_toRightOf="@id/from_to_icon"
+                app:layout_constraintTop_toBottomOf="@id/txtAmount" />
+
+            <TextView
+                android:id="@+id/txt_from_location"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:text="99460 Clovis Inlet, Hamillstad, MO, SB"
+                android:textColor="@color/from_to_text_color"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="@id/fromText"
+                app:layout_constraintTop_toBottomOf="@id/fromText" />
+
+            <TextView
+                android:id="@+id/toText"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:text="To"
+                android:textColor="@color/title_color"
+                android:textSize="10sp"
+                app:layout_constraintLeft_toRightOf="@id/from_to_icon"
+                app:layout_constraintTop_toBottomOf="@id/txt_from_location" />
+
+            <TextView
+                android:id="@+id/txt_to_location"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:text="507 Lang Well, Lake Eliseo, OH, IE"
+                android:textColor="@color/from_to_text_color"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="@id/toText"
+                app:layout_constraintTop_toBottomOf="@id/toText" />
+            <ProgressBar
+                android:id="@+id/progressTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/progressBarBlue"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imgDriver"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraint">
+
+            <ImageView
+                android:id="@+id/driver_profile_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user_avatar" />
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/driver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="13dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Gia Aufderhar MD"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toRightOf="@id/imgDriver"
+            app:layout_constraintTop_toBottomOf="@id/constraint" />
+
+        <TextView
+            android:id="@+id/driver_phone_no"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginTop="1dp"
+            android:text="+01 1234567890"
+            android:textColor="@color/driver_color"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toLeftOf="@id/driver_name"
+            app:layout_constraintTop_toBottomOf="@id/driver_name" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="90dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="1dp"
+            app:layout_constraintLeft_toLeftOf="@id/driver_phone_no"
+            app:layout_constraintTop_toBottomOf="@id/driver_phone_no"
+            app:mrb_fillBackgroundStars="true"
+            app:mrb_progressTint="#FFC400"
+            app:mrb_secondaryProgressTint="#CDCDCD" />
+
+        <TextView
+            android:id="@+id/total_review"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="(25)"
+            android:textColor="#AEAEAE"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/rating_bar"
+            app:layout_constraintStart_toEndOf="@+id/rating_bar"
+            app:layout_constraintTop_toBottomOf="@+id/driver_phone_no" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/btn_call"
+            android:layout_width="60dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/green_rectangle"
+            android:gravity="center"
+
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/driver_name">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_call_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingTop="2dp"
+                android:text="Call"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/txtVehicleDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_marginTop="19dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Vehicle Details"
+            android:textColor="@color/from_to_text_color"
+            app:layout_constraintLeft_toLeftOf="@id/imgDriver"
+            app:layout_constraintTop_toBottomOf="@id/imgDriver" />
+
+        <TextView
+            android:id="@+id/txtCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="57dp"
+            android:layout_marginTop="17dp"
+            android:text="Car"
+            android:textSize="8sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtVehicleDetails" />
+
+        <TextView
+            android:id="@+id/txtCarName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="BMW M Sedan"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtCar"
+            app:layout_constraintStart_toStartOf="@+id/txtCar"
+            app:layout_constraintTop_toBottomOf="@id/txtCar" />
+
+        <TextView
+            android:id="@+id/txtCarNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Car Number"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtCar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtCar" />
+
+        <TextView
+            android:id="@+id/txtCarNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="KL 41G 8703"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtCarNumberText"
+            app:layout_constraintStart_toStartOf="@+id/txtCarNumberText"
+            app:layout_constraintTop_toBottomOf="@id/txtCarNumberText" />
+
+        <TextView
+            android:id="@+id/txtPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="29dp"
+            android:text="Year"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@id/txtCarNumberText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/txtCarNumberText"
+            app:layout_constraintTop_toTopOf="@id/txtCarNumberText" />
+
+        <TextView
+            android:id="@+id/txt_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="$ 30"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtPriceText"
+            app:layout_constraintStart_toStartOf="@+id/txtPriceText"
+            app:layout_constraintTop_toBottomOf="@id/txtPriceText" />
+
+        <TextView
+            android:id="@+id/txtLicenseNoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="13dp"
+            android:text="Licence Number"
+            android:textSize="8sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCarName" />
+
+        <TextView
+            android:id="@+id/txtLicenseNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="#1234567789"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtLicenseNoText"
+            app:layout_constraintStart_toStartOf="@+id/txtLicenseNoText"
+            app:layout_constraintTop_toBottomOf="@id/txtLicenseNoText" />
+
+        <TextView
+            android:id="@+id/txtModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Model"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtLicenseNoText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtLicenseNoText" />
+
+        <TextView
+            android:id="@+id/txtModelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Prius"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtModel"
+            app:layout_constraintStart_toStartOf="@+id/txtModel"
+            app:layout_constraintTop_toBottomOf="@id/txtModel" />
+
+        <TextView
+            android:id="@+id/txtCarColorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="29dp"
+            android:text="Color"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@id/txtModel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/txtModel"
+            app:layout_constraintTop_toTopOf="@id/txtModel" />
+
+        <TextView
+            android:id="@+id/txtCarColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Black"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtCarColorText"
+            app:layout_constraintStart_toStartOf="@+id/txtCarColorText"
+            app:layout_constraintTop_toBottomOf="@id/txtCarColorText" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/termsAndConditionsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtLicenseNo">
+
+            <CheckBox
+                android:id="@+id/termsAndConditionsCheckbox"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_checkbox"
+                android:button="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/termsAndConditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:fontFamily="@font/sprint_sans_regular"
+                android:lines="1"
+                android:text="@string/you_agree_to_our_terms_and_conditions"
+                android:textColor="@color/txtColor"
+                android:textSize="12.5sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cancel_ride"
+            style="@style/CancelButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="30dp"
+            android:insetTop="1dp"
+            android:insetBottom="1dp"
+            android:text="@string/cancel_ride"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/termsAndConditionsLayout" />
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/progressBarBlue"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

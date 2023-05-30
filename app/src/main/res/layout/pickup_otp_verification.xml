@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#050505"
+            android:alpha="0.1"
+            />
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/blurView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:blurOverlayColor="@color/transparent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="236dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:elevation="15dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/titleView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Pickup OTP Verification"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/messageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Enter pickup OTP from your passenger"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/titleView"
+                    app:layout_constraintStart_toStartOf="@+id/titleView"
+                    app:layout_constraintTop_toBottomOf="@id/titleView" />
+
+                <com.mukesh.OtpView
+                    android:id="@+id/otpView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:cursorVisible="false"
+                    android:focusableInTouchMode="true"
+                    android:inputType="number"
+                    android:itemBackground="@drawable/ic_item_background"
+                    app:OtpItemCount="4"
+                    app:OtpItemHeight="38dp"
+                    app:OtpItemSpacing="18dp"
+                    app:OtpItemWidth="38dp"
+                    app:OtpViewType="none"
+                    app:layout_constraintEnd_toEndOf="@+id/messageView"
+                    app:layout_constraintStart_toStartOf="@+id/messageView"
+                    app:layout_constraintTop_toBottomOf="@+id/messageView" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_done"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:layout_marginStart="85dp"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="85dp"
+                    android:backgroundTint="#0D777A"
+                    android:insetTop="1dp"
+                    android:insetBottom="1dp"
+                    android:text="Done"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    app:cornerRadius="12dp"
+                    app:layout_constraintEnd_toEndOf="@+id/otpView"
+                    app:layout_constraintStart_toStartOf="@+id/otpView"
+                    app:layout_constraintTop_toBottomOf="@+id/otpView" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/progressBarBlue"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

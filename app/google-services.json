@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "633898916971",
+    "project_id": "bayride-d39a6",
+    "storage_bucket": "bayride-d39a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633898916971:android:3e53574fb7cccc5883652e",
+        "android_client_info": {
+          "package_name": "com.bayride"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633898916971-rf8unvck27g197g3b9fsi0sd7dq3q36b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe7Yvs9MF35NlbePdrH7W6e0QMVc9nv88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633898916971-rf8unvck27g197g3b9fsi0sd7dq3q36b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

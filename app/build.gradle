@@ -1,0 +1,125 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.4.10'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+
+
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.bayride"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+        renderscriptTargetApi 22
+        renderscriptSupportModeEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation Dependencies.kotlinStandardLib
+    implementation Dependencies.kotlinCoreKtx
+
+    implementation Dependencies.uiEssentialAppCompat
+    implementation Dependencies.uiEssentialConstraintLayout
+    implementation Dependencies.uiEssentialRecycleView
+    implementation Dependencies.uiEssentialViewPager
+    implementation Dependencies.uiMaterialSupport
+    implementation Dependencies.uiGlide
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.4.2'
+    implementation platform("com.google.firebase:firebase-bom:29.3.1")
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+  //  implementation 'com.google.firebase:firebase-crashlytics-ktx:18.2.11'
+    implementation 'com.google.firebase:firebase-analytics-ktx:21.0.0'
+    kapt Dependencies.uiGlideProcessor
+
+    implementation Dependencies.lifecycleViewModel
+    implementation Dependencies.lifecycleLiveData
+    implementation Dependencies.lifecycleRuntime
+    kapt Dependencies.lifecycleAnnotation
+
+    implementation Dependencies.networkRetrofit
+    implementation Dependencies.networkRetrofitJSONConvert
+    implementation Dependencies.networkRetrofitLogging
+    implementation Dependencies.adapterRxjava
+    implementation Dependencies.jsonSerialization
+
+    implementation Dependencies.uiNavigationFragment
+    implementation Dependencies.uiNavigationUI
+
+    implementation Dependencies.reactiveRxJava3
+    implementation Dependencies.reactiveRxAndroid
+
+    implementation Dependencies.pagingUI
+    implementation Dependencies.pagingRxJava
+    implementation Dependencies.androidxSecurityCrypto
+    implementation 'com.github.sparrow007:carouselrecyclerview:1.2.4'
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+
+    implementation Dependencies.diHiltAndroid
+    implementation Dependencies.diHiltLifecycle
+    kapt Dependencies.diHiltAndroidCompiler
+    kapt Dependencies.diHiltCompiler
+
+    testImplementation Dependencies.junit
+    androidTestImplementation Dependencies.junitTest
+    androidTestImplementation Dependencies.espresso
+    implementation "com.squareup.retrofit2:converter-gson:2.6.4"
+    implementation Dependencies.signaturepad
+    implementation Dependencies.googleMaps
+    implementation Dependencies.mapUtils
+    implementation Dependencies.googlePlaces
+
+    implementation Dependencies.pinView
+    implementation "me.zhanghai.android.materialratingbar:library:1.4.0"
+    implementation 'com.github.Dimezis:BlurView:version-2.0.0'
+    implementation "com.github.tarek360:instacapture:2.0.1"
+
+
+    //permission
+    implementation 'com.github.fondesa:kpermissions-coroutines:3.2.1'
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+    implementation 'com.hbb20:ccp:2.6.0'
+
+    implementation Dependencies.map
+    implementation Dependencies.circleImageview
+
+//    implementation 'com.kyanogen.signatureview:signature-view:1.0'
+
+
+}

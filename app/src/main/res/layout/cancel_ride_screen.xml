@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_cross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="24dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:src="@drawable/ic_close"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Let us know why you’re canceling"
+                android:textColor="@color/txtColor"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_cross" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="6dp"
+                    android:text="I found a better price or car "
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/option_second"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="6dp"
+                    android:text="I'm using a different method of transportation "
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/option_third"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="6dp"
+                    android:text="I was just curious about the service"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/option_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="6dp"
+                    android:text="I thought this was a service for Lyft drivers"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/option_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="6dp"
+                    android:text="I need to modify the reservation"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/option_six"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="6dp"
+                    android:text="The trip was cancelled"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/option_seven"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="6dp"
+                    android:text="Other reason, please specify"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/edComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/round_gray_rectengle"
+                    android:gravity="start"
+                    android:visibility="gone"
+                    android:hint="Limited to 36 Characters Only"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:textSize="10sp"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_comment" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cancel_ride"
+                style="@style/CancelButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="25dp"
+                android:insetTop="1dp"
+                android:insetBottom="1dp"
+                android:text="@string/cancel_ride"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

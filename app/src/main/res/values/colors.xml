@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lightGreen">#E6F1F1</color>
+    <color name="txtColor">#0D777A</color>
+    <color name="txtColorWithOpacity">#E60D777A</color>
+    <color name="gray">#9AA6A7</color>
+    <color name="lightGray">#E6E6E6</color>
+    <color name="txtColorGray">#7F7F7F</color>
+    <color name="txtColorGray2">#868686</color>
+    <color name="black2">#211F1F</color>
+    <color name="toggleBackgroundColor">#F8F8F8</color>
+    <color name="selectedTextBlack">#091C1E</color>
+    <color name="transparent">#00000000</color>
+    <color name="title_color">#8E8E8E</color>
+    <color name="nav_drawer_line">#33707070</color>
+    <color name="vehicle_color">#0d777a</color>
+    <color name="smart_txt">#454545</color>
+    <color name="from_to_text_color">#262626</color>
+    <color name="booking_id_color">#363636</color>
+    <color name="driver_color">#AEAEAE</color>
+    <color name="border_color_gray">#93929F</color>
+</resources>

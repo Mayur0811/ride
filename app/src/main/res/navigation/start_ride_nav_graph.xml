@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/start_ride_nav_graph"
+    >
+
+<!--    <fragment-->
+<!--        android:id="@+id/addInformationScreen2"-->
+<!--        android:name="com.bayride.presentation.features.addInformation.AddInformationScreen"-->
+<!--        android:label="AddInformationScreen" >-->
+<!--        <action-->
+<!--            android:id="@+id/action_addInformationScreen2_to_uploadSelfieScreen"-->
+<!--            app:destination="@id/uploadSelfieScreen" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/uploadSelfieScreen"-->
+<!--        android:name="com.bayride.presentation.features.uploadSelfie.UploadSelfieScreen"-->
+<!--        android:label="UploadSelfieScreen" />-->
+</navigation>

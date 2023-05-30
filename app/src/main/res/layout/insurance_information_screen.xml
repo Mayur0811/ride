@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="35dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Insurance Information"
+                android:textColor="@color/txtColor"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+            <TextView
+                android:id="@+id/txt_holder_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Policy Holder Name"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/edHolderLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="26dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_holder_name">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/edHolderName"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/round_gray_rectengle"
+                        android:fontFamily="@font/inter_regular"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/txtColorGray"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/showConfirmPassword1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="16dp"
+                        android:text="View"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/edHolderName"
+                        app:layout_constraintTop_toTopOf="@+id/edHolderName" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/text_policy_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Policy Number"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edHolderLayout" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/edPolicyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="26dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_policy_number">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/edPolicyNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/round_gray_rectengle"
+                        android:fontFamily="@font/inter_regular"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/txtColorGray"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/showConfirmPassword1"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_alignParentTop="true"-->
+                    <!--                    android:layout_alignParentEnd="true"-->
+                    <!--                    android:layout_alignParentBottom="true"-->
+                    <!--                    android:layout_marginEnd="16dp"-->
+                    <!--                    android:text="View"-->
+                    <!--                    android:textColor="@color/gray"-->
+                    <!--                    android:textSize="12sp"-->
+                    <!--                    android:visibility="gone"-->
+                    <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--                    app:layout_constraintEnd_toEndOf="@+id/editBox"-->
+                    <!--                    app:layout_constraintTop_toTopOf="@+id/editBox" />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/txt_phoneNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Phone Number"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edPolicyLayout" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/edPhoneLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="26dp"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_phoneNo">
+
+                <RelativeLayout
+                    android:id="@+id/code_picker"
+                    android:layout_width="75dp"
+                    android:layout_height="45dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/round_gray_rectengle"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/countryPicker"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        app:ccp_contentColor="@color/black"
+                        app:ccp_defaultNameCode="IN"
+                        app:ccp_showFullName="false"
+                        app:ccp_showNameCode="false"
+                        app:ccp_showPhoneCode="true"
+                        app:ccp_textGravity="LEFT"
+                        app:ccp_autoDetectCountry="true"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/code"
+                        android:layout_width="12dp"
+                        android:layout_height="11dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="11dp"
+                        android:src="@drawable/ic_down_421"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </RelativeLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <EditText
+                        android:id="@+id/edPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/round_gray_rectengle"
+                        android:fontFamily="@font/inter_regular"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLength="10"
+                        android:paddingStart="15dp"
+                        android:textColor="@color/txtColorGray"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/showConfirmPassword1"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_alignParentTop="true"-->
+                    <!--                    android:layout_alignParentEnd="true"-->
+                    <!--                    android:layout_alignParentBottom="true"-->
+                    <!--                    android:layout_marginEnd="16dp"-->
+                    <!--                    android:text="View"-->
+                    <!--                    android:textColor="@color/gray"-->
+                    <!--                    android:textSize="12sp"-->
+                    <!--                    android:visibility="gone"-->
+                    <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--                    app:layout_constraintEnd_toEndOf="@+id/editBox"-->
+                    <!--                    app:layout_constraintTop_toTopOf="@+id/editBox" />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save"
+                style="@style/MainButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="25dp"
+                android:fontFamily="@font/sprint_sans_regular"
+                android:insetTop="1dp"
+                android:insetBottom="1dp"
+                android:text="Save"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

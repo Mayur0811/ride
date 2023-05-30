@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeScreen2">
+    <action
+        android:id="@+id/log_out"
+        app:destination="@id/nav_graph" />
+    <fragment
+        android:id="@+id/homeScreen2"
+        android:name="com.bayride.presentation.features.home.HomeScreen"
+        android:label="HomeScreen"
+        tools:layout="@layout/home_screen">
+
+        <action
+            android:id="@+id/action_homeScreen2_to_ongoingScreen_home_nav_graph"
+            app:destination="@id/ongoingScreen_home_nav_graph" />
+        <action
+            android:id="@+id/action_homeScreen2_to_filterScreen2"
+            app:destination="@id/filterScreen2" />
+        <action
+            android:id="@+id/action_homeScreen2_to_addInformationScreen3"
+            app:destination="@id/addInformationScreen3" />
+        <action
+            android:id="@+id/action_homeScreen2_to_homeDetailsScreen"
+            app:destination="@id/homeDetailsScreen" />
+        <action
+            android:id="@+id/action_homeScreen2_to_driverOnGoingScreen"
+            app:destination="@id/driverOnGoingScreen" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/myInformationScreen"
+        android:name="com.bayride.presentation.features.myInformation.MyInformationScreen"
+        android:label="MyInformationScreen"
+        tools:layout="@layout/fragment_my_information_screen" />
+    <fragment
+        android:id="@+id/changePasswordScreen"
+        android:name="com.bayride.presentation.features.changePassword.ChangePasswordScreen"
+        android:label="ChangePasswordScreen"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/profileScreen"
+        android:name="com.bayride.presentation.features.profile.ProfileScreen"
+        android:label="ProfileScreen"
+        tools:layout="@layout/fragment_profile_screen">
+        <action
+            android:id="@+id/action_profileScreen_to_myInformationScreen"
+            app:destination="@id/myInformationScreen" />
+        <action
+            android:id="@+id/action_profileScreen_to_signatureScreen2"
+            app:destination="@id/signatureScreenProfile" />
+
+        <action
+            android:id="@+id/action_profileScreen_to_addPaymentMethodScreenProfile"
+            app:destination="@id/addPaymentMethodScreenProfile" />
+        <action
+            android:id="@+id/action_profileScreen_to_addVehicleDetailsScreen2"
+            app:destination="@id/addVehicleDetailsScreenProfile" />
+        <action
+            android:id="@+id/action_profileScreen_to_photoUploadScreenProfile"
+            app:destination="@id/photoUploadScreenProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/addInformationScreen3"
+        android:name="com.bayride.presentation.features.addInformation.AddFairScreen"
+        android:label="AddInformationScreen"
+        tools:layout="@layout/add_information_screen">
+        <action
+            android:id="@+id/action_addInformationScreen3_to_uploadSelfieScreen"
+            app:destination="@id/uploadSelfieScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadSelfieScreen"
+        android:name="com.bayride.presentation.features.uploadSelfie.UploadSelfieScreen"
+        android:label="UploadSelfieScreen"
+        tools:layout="@layout/uploadselfiescreen">
+        <action
+            android:id="@+id/action_uploadSelfieScreen_to_homeScreen2"
+            app:destination="@id/homeScreen2" />
+        <action
+            android:id="@+id/action_uploadSelfieScreen_to_homeDetailsScreen"
+            app:destination="@id/homeDetailsScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeDetailsScreen"
+        android:name="com.bayride.presentation.features.homedetails.HomeDetailsScreen"
+        android:label="HomeDetailsScreen"
+        tools:layout="@layout/home_details_screen">
+        <action
+            android:id="@+id/action_homeDetailsScreen_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
+        <action
+            android:id="@+id/action_homeDetailsScreen_to_driverProfileScreen"
+            app:destination="@id/driverProfileScreen" />
+        <action
+            android:id="@+id/action_bottomSheetFragment_to_bookNowBottomSheet"
+            app:destination="@id/bookNowBottomSheet" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookingHistoryScreen"
+        android:name="com.bayride.presentation.features.bookingHistory.BookingHistoryScreen"
+        android:label="BookingHistoryScreen"
+        tools:layout="@layout/fragment_booking_history">
+
+    </fragment>
+    <dialog
+        android:id="@+id/bookingSuccessfullyScreen"
+        android:name="com.bayride.presentation.features.bookingSuccessfully.BookingSuccessfullyScreen"
+        android:label="BookingSuccessfullyScreen"
+        tools:layout="@layout/fragment_booking_successfully_screen">
+
+        <action
+            android:id="@+id/action_bookingSuccessfullyScreen_to_homeScreen2"
+            app:destination="@id/homeScreen2"
+            app:popUpTo="@id/homeScreen2"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <dialog
+        android:id="@+id/bookNowBottomSheet"
+        android:name="com.bayride.presentation.features.bookNow.BookNowBottomSheet"
+        android:label="BookNowBottomSheet"
+        tools:layout="@layout/fragment_book_now_screen">
+        <argument
+            android:name="fairList"
+            app:argType="com.bayride.data.models.dto.FairList" />
+        <argument
+            android:name="driverInfo"
+            app:argType="com.bayride.data.models.dto.DriverRequestInfo" />
+    </dialog>
+    <dialog
+        android:id="@+id/creditCardBottomSheet"
+        android:name="com.bayride.presentation.features.creditCardPayment.CreditCardBottomSheet"
+        android:label="CreditCardBottomSheet"
+        tools:layout="@layout/fragment_credit_card_payment_screen">
+        <argument
+            android:name="price"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="fair_driver_bid_id"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_creditCardBottomSheet_to_bookingSuccessfullyScreen2"
+            app:destination="@id/bookingSuccessfullyScreen"
+            app:popUpTo="@+id/homeDetailsScreen"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.bayride.presentation.features.homedetails.driverRequest.DriverRequestBottomSheet"
+        android:label="BottomSheetFragment"
+        tools:layout="@layout/fragment_bottom_sheet">
+
+        <action
+            android:id="@+id/action_bottomSheetFragment_to_driverProfileScreen"
+            app:destination="@id/driverProfileScreen" />
+
+    </dialog>
+    <fragment
+        android:id="@+id/driverProfileScreen"
+        android:name="com.bayride.presentation.features.driverProfile.DriverProfileScreen"
+        android:label="DriverProfileScreen"
+        tools:layout="@layout/driver_profile_screen">
+
+        <argument
+            android:name="userid"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <dialog
+        android:id="@+id/ongoingScreen_home_nav_graph"
+        android:name="com.bayride.presentation.features.ongoing.OngoingScreen"
+        android:label="OngoingScreen"
+        tools:layout="@layout/fragment_ongoing">
+        <action
+            android:id="@+id/action_ongoingScreen_home_nav_graph_to_giveDriverRatingScreen2"
+            app:destination="@id/giveDriverRatingScreen2"
+            app:popUpTo="@+id/homeDetailsScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_ongoingScreen_home_nav_graph_to_cancelRideDialogScreen"
+            app:destination="@id/cancelRideDialogScreen"
+            app:popUpTo="@+id/homeDetailsScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_ongoingScreen_home_nav_graph_to_addEmergencyContactScreen"
+            app:destination="@id/addEmergencyContactScreen" />
+    </dialog>
+    <dialog
+        android:id="@+id/giveDriverRatingScreen2"
+        android:name="com.bayride.presentation.features.giveDriverRating.GiveDriverRatingScreen"
+        android:label="GiveDriverRatingScreen" />
+    <dialog
+        android:id="@+id/filterScreen2"
+        android:name="com.bayride.presentation.features.driver.filter.FilterScreen"
+        android:label="FilterScreen"
+        tools:layout="@layout/filterscreen">
+        <action
+            android:id="@+id/action_filterScreen2_to_sendOfferScreen"
+            app:destination="@id/sendOfferScreen"
+            app:popUpTo="@+id/homeDetailsScreen"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <dialog
+        android:id="@+id/sendOfferScreen"
+        android:name="com.bayride.presentation.features.driver.sendOffer.SendOfferScreen"
+        android:label="SendOfferScreen"
+        tools:layout="@layout/send_offer_screen" />
+    <fragment
+        android:id="@+id/driverBookingHistory"
+        android:name="com.bayride.presentation.features.driver.driverBookingHistory.DriverBookingHistory"
+        android:label="DriverBookingHistory"
+        tools:layout="@layout/driver_booking_history">
+
+        <action
+            android:id="@+id/action_driverBookingHistory_to_driverOnGoingScreen"
+            app:destination="@id/driverOnGoingScreen"
+            app:popUpTo="@+id/homeDetailsScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/driverOnGoingScreen"
+        android:name="com.bayride.presentation.features.driver.driverOngoing.DriverOnGoingScreen"
+        android:label="DriverOnGoingScreen"
+        tools:layout="@layout/driver_ongoing_screen">
+        <argument
+            android:name="driverBookingInfo"
+            app:argType="com.bayride.data.datasources.remote.entities.BookingHistoryInfo"
+            app:nullable="true"/>
+        <argument
+            android:name="driverOnGoingFairDetails"
+            app:argType="com.bayride.data.models.dto.DriverOngoingFairDetails"
+            app:nullable="true"/>
+    </fragment>
+
+    <dialog
+        android:id="@+id/cancelRideDialogScreen"
+        android:name="com.bayride.presentation.features.cancelRideDialog.CancelRideDialogScreen"
+        android:label="CancelRideDialogScreen"
+        tools:layout="@layout/canecl_ride_dialog">
+        <action
+            android:id="@+id/action_cancelRideDialogScreen_to_cancelRideScreen"
+            app:destination="@id/cancelRideScreen" />
+    </dialog>
+    <fragment
+        android:id="@+id/cancelRideScreen"
+        android:name="com.bayride.presentation.features.cancelRide.CancelRideScreen"
+        android:label="CancelRideScreen"
+        tools:layout="@layout/cancel_ride_screen" />
+
+    <fragment
+        android:id="@+id/addEmergencyContactScreen"
+        android:name="com.bayride.presentation.features.emergencyContact.AddEmergencyContactScreen"
+        android:label="AddEmergencyContactScreen"
+        tools:layout="@layout/fragment_add_emergency_contact">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/signatureScreenProfile"
+        android:name="com.bayride.presentation.features.signature.SignatureScreen"
+        android:label="SignatureScreen"
+        tools:layout="@layout/signature_screen" />
+    <fragment
+        android:id="@+id/addPaymentMethodScreenProfile"
+        android:name="com.bayride.presentation.features.paymentMethod.AddPaymentMethodScreen"
+        android:label="AddPaymentMethodScreen" />
+    <fragment
+        android:id="@+id/addVehicleDetailsScreenProfile"
+        android:name="com.bayride.presentation.features.driver.addVehicleDetails.AddVehicleDetailsScreen"
+        android:label="AddVehicleDetailsScreen" />
+    <fragment
+        android:id="@+id/photoUploadScreenProfile"
+        android:name="com.bayride.presentation.features.uploadphoto.PhotoUploadScreen"
+        android:label="PhotoUploadScreen"
+        tools:layout="@layout/fragment_photo_upload_screen">
+        <argument
+            android:name="title"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="subTitle"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+
+</navigation>

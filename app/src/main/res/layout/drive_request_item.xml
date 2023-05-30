@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="25dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgDriver"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+
+            app:barrierMargin="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/rounded_corner_image" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@id/imgDriver"
+            app:layout_constraintTop_toTopOf="@id/imgDriver">
+
+            <TextView
+                android:id="@+id/txtDriverName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="Gia Aufderhar MD"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtDriverNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:text="+01 1234567890"
+                android:textColor="#AEAEAE"
+                android:textSize="10sp"
+                app:layout_constraintLeft_toLeftOf="@id/txtDriverName"
+                app:layout_constraintTop_toBottomOf="@id/txtDriverName" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintLeft_toLeftOf="@id/txtDriverNumber"
+                app:layout_constraintTop_toBottomOf="@id/txtDriverNumber">
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/driverRating"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:maxHeight="10dp"
+                    android:rating="3.5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:mrb_fillBackgroundStars="true"
+                    app:mrb_progressTint="#FFC400"
+                    app:mrb_secondaryProgressTint="#CDCDCD" />
+
+                <TextView
+                    android:id="@+id/txtTotalRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:layout_marginStart="1dp"
+                    android:text="(25)"
+                    android:textColor="#AEAEAE"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/driverRating"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llJourney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgDriver">
+
+            <LinearLayout
+                android:id="@+id/llCarType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:text="Car"
+                    android:textColor="#AEAEAE"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/txtCarBrand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:breakStrategy="simple"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="BMW M Sedan"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCarNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:text="Car Number"
+                    android:textColor="#AEAEAE"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/txtCarNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:breakStrategy="simple"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:text="KL 41G 8703"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:text="Price"
+                    android:textColor="#AEAEAE"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/txtOfferRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:breakStrategy="simple"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:text="$ 530"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <LinearLayout
+            android:id="@+id/llButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@id/llJourney">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/llReject"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:insetTop="1dp"
+                android:insetBottom="1dp"
+                android:shadowColor="@color/lightGreen"
+                android:text="Reject"
+                android:textAllCaps="false"
+                android:textColor="@color/txtColor"
+                android:textSize="10sp"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/confirm_signature"
+                app:rippleColor="@color/txtColor"
+                app:strokeColor="@color/txtColor"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/llAccept"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/button_disabled"
+                android:fontFamily="@font/poppins_medium"
+                android:insetTop="1dp"
+                android:insetBottom="1dp"
+                android:text="Accept"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:cornerRadius="8dp"
+                app:iconTint="#0d777a"
+                app:layout_constraintBottom_toBottomOf="parent" />
+            <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--            android:id="@+id/llReject"-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="45dp"-->
+            <!--            android:layout_marginEnd="3dp"-->
+            <!--            android:layout_weight="1"-->
+            <!--            android:background="@drawable/round_linearlayout_button"-->
+            <!--            android:gravity="center">-->
+
+            <!--            <TextView-->
+            <!--                app:layout_constraintTop_toTopOf="parent"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--                app:layout_constraintRight_toRightOf="parent"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="Reject"-->
+            <!--                android:textColor="#0D777A"-->
+            <!--                android:textSize="14sp" />-->
+
+            <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--            android:id="@+id/llAccept"-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_marginStart="3dp"-->
+            <!--            android:layout_height="45dp"-->
+            <!--            android:layout_weight="1"-->
+            <!--            android:background="@drawable/round_linearlayout_button"-->
+            <!--            android:backgroundTint="#0D777A"-->
+            <!--            android:gravity="center">-->
+
+            <!--            <TextView-->
+            <!--                app:layout_constraintTop_toTopOf="parent"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--                app:layout_constraintRight_toRightOf="parent"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="Accept"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="14sp" />-->
+
+            <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="6dp"
+            android:background="#AEAEAE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llButtons" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

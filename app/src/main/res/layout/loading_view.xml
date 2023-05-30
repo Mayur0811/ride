@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:theme="@style/progressBarBlue"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/constraint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/constraint" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/request_dialog"
+            android:layout_width="264dp"
+            android:layout_height="264dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="55dp"
+            android:elevation="12dp"
+            android:visibility="gone"
+            app:cardCornerRadius="25dp">
+            <!--    <ImageView-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:src="@drawable/ic_request_successfully_sent"/>-->
+
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+      >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="?android:attr/selectableItemBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+           >
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/nameTitle"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:background="@drawable/round_gray_rectangle_with_cut"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingLeft="26dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"
+                android:text="Contact Information"
+                android:textColor="@color/gray"
+                android:textSize="15sp"
+                android:gravity="center_vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <ImageView
+            android:id="@+id/ic_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_checked_square"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView">
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/ic_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_lock_icon"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView">
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/ic_lock_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_lock_green"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView">
+
+        </ImageView>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/linearlayout"
+    android:layout_width="26dp"
+    android:layout_height="26dp"
+    android:background="@drawable/circle_border_gray"
+    app:layout_constraintBottom_toBottomOf="@+id/textView"
+    app:layout_constraintEnd_toStartOf="@+id/textView"
+    app:layout_constraintStart_toStartOf="@+id/textView"
+    app:layout_constraintTop_toTopOf="@+id/textView" >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/number"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:gravity="center"
+            android:textColor="@color/gray"
+            android:text="1"
+            android:textSize="20sp"/>
+</androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

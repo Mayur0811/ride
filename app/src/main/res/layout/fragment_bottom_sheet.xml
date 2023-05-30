@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    style="?attr/bottomSheetStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/llJourney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="54dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_corner"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--            android:background="@drawable/round_corner"-->
+
+            <TextView
+                android:id="@+id/txtJourneyDateAndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Nov 25, 2021, 09:30 AM"
+                android:textColor="#454545"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Price:"
+                android:textColor="#454545"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="@id/txtJourneyDateAndTime"
+                app:layout_constraintTop_toBottomOf="@id/txtJourneyDateAndTime" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="$40"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/rate"
+                app:layout_constraintLeft_toRightOf="@id/rate"
+                app:layout_constraintTop_toTopOf="@id/rate" />
+
+            <ImageView
+                android:id="@+id/imgFromTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_from_to"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rate" />
+
+
+            <TextView
+                android:id="@+id/fromText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="From"
+                android:textColor="#8E8E8E"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toRightOf="@id/imgFromTo"
+                app:layout_constraintTop_toTopOf="@id/imgFromTo" />
+
+            <TextView
+                android:id="@+id/txtCurrentPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="99460 Clovis Inlet, Hamillstad, MO, SB"
+                android:textColor="#262626"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="@id/fromText"
+                app:layout_constraintTop_toBottomOf="@id/fromText" />
+
+            <TextView
+                android:id="@+id/toText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="To"
+                android:textColor="#8E8E8E"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/imgFromTo"
+                app:layout_constraintLeft_toRightOf="@id/imgFromTo" />
+
+            <TextView
+                android:id="@+id/txDestinationPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="507 Lang Well, Lake Eliseo, OH, IE"
+                android:textColor="#262626"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="@id/toText"
+                app:layout_constraintTop_toBottomOf="@id/toText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/driverRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="13dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Driver Request"
+            android:textColor="#0D777A"
+            android:textSize="15sp"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llJourney" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvDriveRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:clipToPadding="true"
+            android:paddingBottom="310dp"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/driverRequest"
+            tools:listitem="@layout/drive_request_item" />
+
+        <ImageView
+            android:id="@+id/waitingForDriverImageView"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginLeft="59dp"
+            android:layout_marginTop="135dp"
+            android:layout_marginRight="59dp"
+            android:background="@drawable/ic_waiting_for_driver"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llJourney" />
+
+        <TextView
+            android:id="@+id/txtWaitingForDriver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Waiting For Driver!"
+            android:textColor="@color/txtColorGray"
+            android:textSize="15sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@id/waitingForDriverImageView"
+            app:layout_constraintRight_toRightOf="@id/waitingForDriverImageView"
+            app:layout_constraintTop_toBottomOf="@id/waitingForDriverImageView" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/progressBarBlue"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
